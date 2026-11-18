@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080D2B;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 16px 35px;
+    background: linear-gradient(
+        160deg,
+        #18245A,
+        #101A45,
+        #080D2B
+    );
+}
+
+/* Header */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    background: #F5CE45;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.app-header h2 {
+    color: #FFFFFF;
+    font-size: 23px;
+}
+
+.app-header p {
+    color: #F5CE45;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Usage Card */
+
+.usage-card {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid #394779;
+    border-radius: 20px;
+    padding: 23px 10px;
+    margin-bottom: 22px;
+}
+
+.usage-card h2 {
+    color: #F5CE45;
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.usage-card p {
+    color: #D5D8EE;
+    font-size: 13px;
+}
+
+/* SIM Card */
+
+.sim-card {
+    background: rgba(40, 200, 150, 0.07);
+    border: 1px solid #36CFA1;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 22px;
+}
+
+.sim-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.sim-card p {
+    color: #D8E1FF;
+    margin-bottom: 12px;
+}
+
+.status {
+    display: inline-block;
+    background: rgba(255, 70, 90, 0.15);
+    color: #FF7888;
+    border: 1px solid #FF6478;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Controls */
+
+.control-section h3 {
+    color: #F5CE45;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.control-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid #49559A;
+    border-radius: 17px;
+    padding: 19px 14px;
+    margin-bottom: 13px;
+    font-size: 14px;
+}
+
+/* Message Box */
+
+.message-box {
+    margin-top: 25px;
+}
+
+.message-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.message-box p {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #49559A;
+    border-radius: 17px;
+    padding: 25px 18px;
+    color: #D5D8EE;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 400px) {
+    .app-header h2 {borderColornt-size: 20px;
+    }
+
+    .control-card {
+        font-size: 13px;
+        padding: 16px 11px;
+    }
+}
+
+
+
+/* LOGIN PAGE */
+
+.login-container {
+    min-height: 100vh;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, #18245A, #080D2B);
+}
+
+.login-logo {
+    width: 80px;
+    height: 80px;
+    background: #F5CE45;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.login-container h1 {
+    font-size: 23px;
+    text-align: center;
+}
+
+.login-subtitle {
+    color: #F5CE45;
+    margin: 8px 0 30px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid #49559A;
+    border-radius: 22px;
+    padding: 25px 20px;
+}
+
+.login-card h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.login-card > p {
+    color: #C7CBE0;
+    margin-bottom: 23px;
+}
+
+.login-card label {
+    display: block;
+    margin: 15px 0 8px;
+    color: #F5CE45;
+    font-size: 14px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #56649F;
+    background: #111B46;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #F5CE45;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #F5CE45;
+    color: #101A45;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.register-text {
+    margin-top: 23px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.register-text a {
+    color: #F5CE45;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 25px;
+}

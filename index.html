@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101A45">
+    <title>International e-SIM & Roaming Service</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .payment-section {
+            background: white;
+            padding: 18px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        .payment-card {
+            padding: 15px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            color: #17234F;
+        }
+
+        .payment-number {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .personal-label {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #168044;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .copy-button {
+            padding: 9px 15px;
+            background: #26376D;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            margin-top: 10px;
+        }
+
+        .whatsapp-button {
+            display: block;
+            text-align: center;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            margin-top: 18px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <button onclick="customerLogout()" style="
+        padding:10px 18px;
+        background:#d93025;
+        color:white;
+        border:none;
+        border-radius:8px;
+        margin-top:15px;
+    ">Logout</button>
+
+    <header class="app-header">
+        <div class="logo">🌐</div>
+        <div>
+            <h2>আমার eSIM</h2>
+            <p>International eSIM • 200+ Countries</p>
+        </div>
+    </header>
+
+    <section class="usage-card">
+        <div>
+            <h2>0 MB</h2>
+            <p>ডাটা ব্যবহার</p>
+        </div>
+        <div>
+            <h2>0</h2>
+            <p>মিনিট</p>
+        </div>
+    </section>
+
+    <section class="sim-card">
+        <h3>📱 eSIM Status</h3>
+        <p>SIM Deactivated</p>
+        <span class="status">DEACTIVE</span>
+    </section>
+
+    <section class="control-section">
+        <h3>Service Controls</h3>
+
+        <div class="control-card">
+            <span>📱 SIM Activation</span>
+            <span class="status">OFF</span>
+        </div>
+
+        <div class="control-card">
+            <span>🌐 eSIM Connect</span>
+            <span class="status">OFF</span>
+        </div>
+
+        <div class="control-card">
+            <span>✈️ International Roaming</span>
+            <span class="status">OFF</span>
+        </div>
+
+        <div class="control-card">
+            <span>📡 Mobile Hotspot</span>
+            <span class="status">OFF</span>
+        </div>
+    </section>
+
+    <!-- Available Packages -->
+    <section class="package-section">
+        <h3>🌍 Available Packages</h3>
+
+        <div id="customerPackages">
+            <p>প্যাকেজ লোড হচ্ছে...</p>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+
+        <h3>💳 Payment Options</h3>
+        <p style="color:#666; margin-top:8px;">
+            পেমেন্টের জন্য নিচের নম্বরে টাকা পাঠান।
+        </p>
+
+        <!-- bKash -->
+        <div class="payment-card">
+            <h3>🩷 bKash</h3>
+
+            <div class="payment-number">
+                01628885809
+            </div>
+
+            <span class="personal-label">PERSONAL</span>
+
+            <br>
+
+            <button class="copy-button"
+                onclick="copyPaymentNumber('01628885809')">
+                Copy Number
+            </button>
+        </div>
+
+        <!-- Nagad -->
+        <div class="payment-card">
+            <h3>🟠 Nagad</h3>
+
+            <div class="payment-number">
+                01628885809
+            </div>
+
+            <span class="personal-label">PERSONAL</span>
+
+            <br>
+
+            <button class="copy-button"
+                onclick="copyPaymentNumber('01628885809')">
+                Copy Number
+            </button>
+        </div>
+
+        <p style="font-size:13px; color:#666; margin-top:15px;">
+            টাকা পাঠানোর আগে নম্বর ও পেমেন্টের পরিমাণ যাচাই করে নিন।
+        </p>
+
+    </section>
+
+    <!-- WhatsApp Support -->
+    <section style="margin-top:20px;">
+        <h3>📞 Customer Support</h3>
+
+        <a class="whatsapp-button"
+           href="https://wa.me/60142494185"
+           target="_blank">
+            💬 WhatsApp Support
+        </a>
+    </section>
+
+    <!-- Message Box -->
+    <section class="message-box">
+        <h3>eSIM Message Box</h3>
+        <p>কোনো মেসেজ নেই</p>
+    </section>
+
+</div>
+
+<script>
+function copyPaymentNumber(number) {
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(number)
+            .then(function() {
+                alert("Payment Number Copied!");
+            })
+            .catch(function() {
+                alert("Number: " + number);
+            });
+    } else {
+        alert("Number: " + number);
+    }
+}
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
