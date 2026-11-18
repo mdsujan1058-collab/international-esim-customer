@@ -1,3 +1,4 @@
+
 {
   "name": "International eSIM",
   "short_name": "International eSIM",
@@ -7,5 +8,13 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0b1238",
-  "theme_color": "#0b1238"
+  "theme_color": "#0b1238",
+  "icons": [
+    {
+      "src": "launchericon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }
