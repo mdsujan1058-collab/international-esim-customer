@@ -1,0 +1,11 @@
+{
+  "name": "International eSIM",
+  "short_name": "International eSIM",
+  "description": "International eSIM Roaming Service",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1238",
+  "theme_color": "#0b1238"
+}
