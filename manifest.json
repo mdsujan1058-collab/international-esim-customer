@@ -1,8 +1,9 @@
 
 {
-  "name": "International eSIM",
+  "id": "/international-esim-customer/",
+  "name": "International eSIM Roaming Service",
   "short_name": "International eSIM",
-  "description": "International eSIM Roaming Service",
+  "description": "International eSIM Roaming Service - Stay Connected Anywhere in the World.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
